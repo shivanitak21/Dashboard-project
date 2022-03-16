@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root
+{
+    --orange:#ffa500;
+    --white: #fff;
+    --grey:#f5f5f5;
+    --blue: #287bff;
+    --black1:#222;
+    --black2:#999;
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    background: var(--orange);
+    border-left: 10px solid var(--orange);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 200%;
+    list-style: none;
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover{
+    background:var(--white) ;
+}
+
+.navigation ul li:nth-child(1)
+{
+    margin-bottom: 40px;
+    pointer-events: none;
+    background-color: #ff8c00;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation ul li:hover a{
+    color: var(--orange);
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+    font-size: 1.75em;
+}
+.main{
+    position: absolute;
+    width: calc(100% -300px);
+    left: 300px;
+    min-height: 100vh;
+    background-color: var(--white);
+    transition: 0.5s;
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.toggle{
+    position: relative;
+    width:60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    width: 100%;
+    height: 40px;
+    padding: 5px 20px ;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+.user toggle ion-icon{
+    position: absolute;
+    top:0;
+    left: 10px;
+    font-size: 1.2rem;
+}
+
+.home-section .home-content{
+    position: relative;
+    padding-top: 104px;
+  }
+  .home-content .overview-boxes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-bottom: 26px;
+  }
+  .overview-boxes .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 4 - 15px);
+    background: #fff;
+    padding: 15px 14px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  .overview-boxes .box-topic{
+    font-size: 20px;
+    font-weight: 200;
+  }
+  .home-content .box .number{
+    display: inline-block;
+    font-size: 25px;
+    margin-top: -6px;
+    font-weight: 500;
+  }
+  .home-content .box .indicator{
+    display: flex;
+    align-items: center;
+  }
+  .home-content .box .indicator i{
+    height: 20px;
+    width: 20px;
+    background: #8FDACB;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  .box .indicator i.down{
+    background: #e87d88;
+  }
+  .home-content .box .indicator .text{
+    font-size: 12px;
+  }
+
+  .home-content2 .sales-boxes{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+
+  .home-content2 .sales-boxes .recent-sales box{
+    width: 65%;
+    background: #fff;
+    padding: 20px 30px;
+    margin: 0 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .home-content2 .sales-boxes .sales-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sales-boxes .box .title{
+    font-size: 24px;
+    font-weight: 500;
+    
+  }
+  .sales-boxes .sales-details li.topic{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: var(--black2);
+
+  }
+  .sales-boxes .sales-details li{
+    list-style: none;
+    margin: 8px 0;
+  }
+  .sales-boxes .sales-details li a{
+    font-size: 18px;
+    color: #333;
+    font-size: 400;
+    text-decoration: none;
+  }
+  
+  .home-content3 .sales-boxes .top-sales box{
+    width: 35%;
+    background: #fff;
+    padding: 20px 30px;
+    margin: 0 20px 0 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .sales-boxes .top-sales li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  .sales-boxes .top-sales li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .sales-boxes .top-sales li .product,
+  .price{
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+  }
+  @media (max-width: 1240px) {
+    .sidebar{
+      width: 60px;
+    }
+    .sidebar.active{
+      width: 220px;
+    }
+    .home-section{
+      width: calc(100% - 60px);
+      left: 60px;
+    }
+    .sidebar.active ~ .home-section{
+      overflow: hidden;
+      left: 220px;
+    }
+    .home-section nav{
+      width: calc(100% - 60px);
+      left: 60px;
+    }
+    .sidebar.active ~ .home-section nav{
+      width: calc(100% - 220px);
+      left: 220px;
+    }
+  }
+  @media (max-width: 1150px) {
+    .home-content .sales-boxes{
+      flex-direction: column;
+    }
+    .home-content .sales-boxes .box{
+      width: 100%;
+      overflow-x: scroll;
+      margin-bottom: 30px;
+    }
+    .home-content .sales-boxes .top-sales{
+      margin: 0;
+    }
+  }
